@@ -249,7 +249,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* 5. INTEGRANTES DEL EQUIPO (QR MÁS GRANDE) */}
+        {/* 5. INTEGRANTES DEL EQUIPO */}
         <section className="py-space-xl border-t border-outline-variant/30">
           <div className="text-center mb-space-lg">
             <h2 className="font-headline-sm text-xl font-bold text-on-surface">
@@ -257,43 +257,91 @@ export default function App() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-            {TEAM_MEMBERS.map((member) => (
-              <div
-                key={member.initials}
-                className="p-3.5 bg-surface-container-lowest rounded-xl border border-outline-variant/40 flex items-center justify-between gap-3 shadow-xs"
-              >
-                <div className="flex items-center gap-3 min-w-0">
-                  <div
-                    className={`w-11 h-11 rounded-full ${member.avatarBg} ${member.avatarText} font-bold flex items-center justify-center text-xs shrink-0 shadow-xs`}
-                  >
-                    {member.initials}
-                  </div>
-                  <div className="min-w-0">
-                    <h3 className="font-title-md text-xs font-bold text-on-surface truncate">
-                      {member.name}
-                    </h3>
-                    <span className="font-body-sm text-[11px] text-on-surface-variant block truncate mt-0.5">
-                      {member.role}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Botón QR más amplio */}
-                <button
-                  onClick={() => setSelectedMember(member)}
-                  className="w-24 h-11 rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1.5 border border-outline-variant/30 shrink-0 cursor-pointer"
-                  title={`Ver QR de ${member.name}`}
-                >
-                  <span className="material-symbols-outlined text-[20px] text-primary">
-                    qr_code_2
-                  </span>
-                  <span className="font-label-sm text-[11px] font-bold text-primary">
-                    QR LinkedIn
-                  </span>
-                </button>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* 1. Rodrigo Alexis Mejía Rivas */}
+            <div className="p-4 bg-surface-container-lowest rounded-2xl border border-outline-variant/40 flex flex-col items-center text-center shadow-xs">
+              <div className="w-32 h-32 bg-surface-container rounded-xl border border-outline-variant/30 flex items-center justify-center overflow-hidden mb-3">
+                <img
+                  src="/qr-rodrigo.png" // Reemplaza por la ruta o URL de su imagen de QR
+                  alt="QR LinkedIn Rodrigo Mejía"
+                  className="w-full h-full object-contain p-1"
+                />
               </div>
-            ))}
+              <h3 className="font-title-md text-sm font-bold text-on-surface">
+                Rodrigo Alexis Mejía Rivas
+              </h3>
+              <span className="font-body-sm text-xs text-on-surface-variant mt-0.5">
+                Project Manager
+              </span>
+            </div>
+
+            {/* 2. Bryan Josue Fuentes Molina */}
+            <div className="p-4 bg-surface-container-lowest rounded-2xl border border-outline-variant/40 flex flex-col items-center text-center shadow-xs">
+              <div className="w-32 h-32 bg-surface-container rounded-xl border border-outline-variant/30 flex items-center justify-center overflow-hidden mb-3">
+                <img
+                  src="/qr-bryan.png" // Reemplaza por la ruta o URL de su imagen de QR
+                  alt="QR LinkedIn Bryan Fuentes"
+                  className="w-full h-full object-contain p-1"
+                />
+              </div>
+              <h3 className="font-title-md text-sm font-bold text-on-surface">
+                Bryan Josue Fuentes Molina
+              </h3>
+              <span className="font-body-sm text-xs text-on-surface-variant mt-0.5">
+                DevOps + Backend Developer
+              </span>
+            </div>
+
+            {/* 3. Andre Emanuel Preza Deras */}
+            <div className="p-4 bg-surface-container-lowest rounded-2xl border border-outline-variant/40 flex flex-col items-center text-center shadow-xs">
+              <div className="w-32 h-32 bg-surface-container rounded-xl border border-outline-variant/30 flex items-center justify-center overflow-hidden mb-3">
+                <img
+                  src="/qr-andre.png" // Reemplaza por la ruta o URL de su imagen de QR
+                  alt="QR LinkedIn Andre Preza"
+                  className="w-full h-full object-contain p-1"
+                />
+              </div>
+              <h3 className="font-title-md text-sm font-bold text-on-surface">
+                Andre Emanuel Preza Deras
+              </h3>
+              <span className="font-body-sm text-xs text-on-surface-variant mt-0.5">
+                Full Stack Developer
+              </span>
+            </div>
+
+            {/* 4. Joaquín Eduardo Morán Mejía */}
+            <div className="p-4 bg-surface-container-lowest rounded-2xl border border-outline-variant/40 flex flex-col items-center text-center shadow-xs">
+              <div className="w-32 h-32 bg-surface-container rounded-xl border border-outline-variant/30 flex items-center justify-center overflow-hidden mb-3">
+                <img
+                  src="/qr-joaquin.png" // Reemplaza por la ruta o URL de su imagen de QR
+                  alt="QR LinkedIn Joaquín Morán"
+                  className="w-full h-full object-contain p-1"
+                />
+              </div>
+              <h3 className="font-title-md text-sm font-bold text-on-surface">
+                Joaquín Eduardo Morán Mejía
+              </h3>
+              <span className="font-body-sm text-xs text-on-surface-variant mt-0.5">
+                DevOps + Backend Developer
+              </span>
+            </div>
+
+            {/* 5. Leonardo Enrique Flores Coto */}
+            <div className="p-4 bg-surface-container-lowest rounded-2xl border border-outline-variant/40 flex flex-col items-center text-center shadow-xs sm:col-span-2 sm:max-w-xs sm:mx-auto w-full">
+              <div className="w-32 h-32 bg-surface-container rounded-xl border border-outline-variant/30 flex items-center justify-center overflow-hidden mb-3">
+                <img
+                  src="/qr-leonardo.png" // Reemplaza por la ruta o URL de su imagen de QR
+                  alt="QR LinkedIn Leonardo Flores"
+                  className="w-full h-full object-contain p-1"
+                />
+              </div>
+              <h3 className="font-title-md text-sm font-bold text-on-surface">
+                Leonardo Enrique Flores Coto
+              </h3>
+              <span className="font-body-sm text-xs text-on-surface-variant mt-0.5">
+                Full Stack Developer
+              </span>
+            </div>
           </div>
         </section>
 
