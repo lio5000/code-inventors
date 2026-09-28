@@ -1,0 +1,6 @@
+{
+  "name": "Code Inventors",
+  "description": "Plataforma y aplicación móvil interactiva para el aprendizaje de lenguajes de programación con editor táctil, tutor inteligente y gamificación.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
